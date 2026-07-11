@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from '../layout';
 
 class DesignScale extends Component {
         render() {
@@ -12,7 +12,7 @@ class DesignScale extends Component {
                             <p>Working over a wide range of scale (from hand-sized to warehouse-sized), I often lose a sense of what certain details will look like in real life.</p>
                             <p>The industrial designer within me has always needed to maintain a certain level of aesthetic appeal, but it's often easy to over-complicate designs in this pursuit.</p>
                             <br></br>
-                            <p>This could be things such as tweaking the bend configuration of a exterior sheetmetal cover - does 2x 45 degree bends look better than 1x 90 degree to justify the cost?</p>
+                            <p>This could be things such as tweaking the bend configuration of an exterior sheetmetal cover - does 2x 45 degree bends look better than 1x 90 degree to justify the cost?</p>
                             <br></br>
                             <p>Or for mechanism designs where endless tweaks can be made to the geometry of weight saving cutouts - should I use a hex grid? circle? truss?</p>
                             <br></br>
@@ -34,7 +34,7 @@ class DesignScale extends Component {
                         <Cell col={12} phone={12} style={{'text-align':'center', margin: 'auto'}}>
                             <hr/>
                             <h4>When taking into perspective the size of the piece though, it becomes pretty clear why it 'works' and resonates with people.</h4>
-                            <p>Namely the focus on getting the colours right and really leveraging the simplicity size of the piece to create impact.</p>
+                            <p>Namely the focus on getting the colours right and really leveraging the simplicity and size of the piece to create impact.</p>
                             <br></br>
                             <p>I won't say that I'd personally pay $40million for this piece - but nonetheless it has always popped into my mind when I find myself over-thinking the minutiae of a design.</p>
                         </Cell>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from '../layout';
 
 class euler_angles extends Component {
         render() {
@@ -45,7 +45,7 @@ class euler_angles extends Component {
                             <Cell col={12} style={{'text-align':'top', margin: 'auto'}}>
                          
                             <h4>How?</h4>
-                            <p>So what I wanted to cover in this post (and will hopefully help anyone who stumbles on this via googling Euler angles for a Meca500), is how do we arrive at the general solution presented on that page? <br></br>I hope you enjoy the following refresher in trignometric functions/identities :)</p>
+                            <p>So what I wanted to cover in this post (and will hopefully help anyone who stumbles on this via googling Euler angles for a Meca500), is how do we arrive at the general solution presented on that page? <br></br>I hope you enjoy the following refresher in trigonometric functions/identities :)</p>
                             <hr></hr>
                             <img src={'/meca_euler_1.PNG'} width="90%" style={{'padding':'auto'}} class='inline-img'></img>
                             <hr></hr>
@@ -59,7 +59,7 @@ class euler_angles extends Component {
                         </Cell>
                         <Cell col={12}>
                         <br></br>
-                        <p><b>TLDR;</b> Calibrating 6-axis robots is a pain, but at least Euler angles are more intuitive than quarternions.</p>
+                        <p><b>TLDR;</b> Calibrating 6-axis robots is a pain, but at least Euler angles are more intuitive than quaternions.</p>
                         <br></br>
                         <br></br>
                         </Cell>

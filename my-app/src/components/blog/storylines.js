@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell, Card } from 'react-mdl';
+import { Grid, Cell, Card } from '../layout';
 
 class storylines extends Component {
         render() {
@@ -61,10 +61,10 @@ class storylines extends Component {
                         </Cell>
                         <Cell col={5} style={{'text-align':'top', margin: 'auto'}}>
                             <b>Fast forward to 2021</b>
-                            <p>I've totally lost track of the number sequels, which have been spread across every platform possible to milk money out of the series fans.</p>
+                            <p>I've totally lost track of the number of sequels, which have been spread across every platform possible to milk money out of the series' fans.</p>
                             <p>Multi-hour long Youtube lectures can be found aplenty to explain the unrecognizable spaghetti ball of a plot.</p>
                             <br></br>
-                            <p>Time travel is now a big thing, as is cloning, weird behind-the-scenes illuminati groups and sub-groups, along with plenty of deux ex machina. The cast has also ballooned to the point where even "main" characters had the depth of a puddle.</p>
+                            <p>Time travel is now a big thing, as is cloning, weird behind-the-scenes illuminati groups and sub-groups, along with plenty of deus ex machina. The cast has also ballooned to the point where even "main" characters had the depth of a puddle.</p>
                             <br></br>
 
                         </Cell>

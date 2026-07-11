@@ -6,7 +6,7 @@ class PlateDragga extends Component {
             <div className="tab-content">
                 <h2>High Force Grippers & Lift Platforms</h2>
                 <hr></hr>
-                <p style={{color:'red'}}><b><em>The below content is not intended to be a "review" of the K5600 machines, and is likely out of date with respect to some design aspects. 
+                <p style={{color:'red'}}><b><em>The below content is not intended to be a "review" of the K5600 machines, and is likely out of date with respect to some features. 
                     <br></br>All commentary is focused solely on my own contributions and personal opinions.</em></b></p>
                 <br></br>
                 <p>Fundamentally, almost all CNC plasma cutting machines are some form of gantry + table design; <br></br>
@@ -14,7 +14,7 @@ class PlateDragga extends Component {
                 <br></br>
                 </p>  
                 <p>
-                The K5600 "Plate Dragga" flips this paradigm, so the gantry and cutting tools are fixed while the plate is fed (by seperate motion platforms with grippers) over a variable-aperture cutting platform for processing. 
+                The K5600 "Plate Dragga" flips this paradigm, so the gantry and cutting tools are fixed while the plate is fed (by separate motion platforms with grippers) over a variable-aperture cutting platform for processing. 
                 <br></br>
                 This provides a lot of benefits, but most significantly it reduces the job times for batches of small parts; 
                 they can be cut and dropped onto a outfeed conveyor, as opposed to needing to be picked out by an operator. Scroll down to the video section for a visual explanation!
@@ -91,7 +91,7 @@ class PlateDragga extends Component {
                 This was all milled on the <Link to="/projects/M100_cam">enormous 3+2 axis in-house M100 mill</Link> and despite something which may look simple, required a huge amount of CAM program tweaks and fixturing to manufacture reliably.
                 Mostly this was due to the hardness of the plate, coupled with the relative low thickness, plus the chamfers being exceptionally shallow. 
                 <br></br>
-                Despite the perfect recipe for extreme tool wear and vibrations, which was a major achievement to overcome in order to achieve the high standards seen in the final platform.
+                It was the perfect recipe for extreme tool wear and vibrations, so reliably hitting the high standards seen in the final platform was a major achievement.
                 </p>
                 <h3 style={{'background-color':'#A9A9A9', padding:'0.2em'}}>Video</h3>
                 <iframe style={{'padding-bottom':'2em'}} width="560" muted="true" height="315" src="https://www.youtube.com/embed/nOyjXuZbA7M?start=31" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from '../layout';
 
 class electric_bmx_bike extends Component {
         render() {
@@ -26,7 +26,7 @@ class electric_bmx_bike extends Component {
                         <li>The bike had rear v-brakes only, so while 50km/h was a smooth ~2.5s throttle blip away, slowing down was a much more dramatic ordeal.</li>
                         <li>Complete lack of suspension made it impractical when riding bumpy roads or hopping curbs are necessary. The hub motor was also HEAVY (I had over-spec'ed with plans to upgrade to a 12kW controller initially).</li>
                         <li>Torque arm design which is susceptible to fatigue failure, due to the cyclic loading of heavy acceleration and regen braking.</li>
-                        <li>An enclosure for the battery/controller that's rated for some puddle smashiong (IP64/5 or thereabouts), and more aesthetically pleasing (though the scrap copper sheet and recycled hose clamps do give it some character).</li>
+                        <li>An enclosure for the battery/controller that's rated for some puddle smashing (IP64/5 or thereabouts), and more aesthetically pleasing (though the scrap copper sheet and recycled hose clamps do give it some character).</li>
                     </ul>
                     <h3>Lessons Learned</h3>
                     <hr/>

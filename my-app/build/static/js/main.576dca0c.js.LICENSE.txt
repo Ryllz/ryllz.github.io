@@ -11,12 +11,6 @@ object-assign
 */
 
 /*!
-  Copyright (c) 2018 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-
-/*!
  * Adapted from jQuery UI core
  *
  * http://jqueryui.com
@@ -27,25 +21,6 @@ object-assign
  *
  * http://api.jqueryui.com/category/ui-core/
  */
-
-/*!
-* Proton v4.2.1
-* https://github.com/drawcall/Proton
-*
-* Copyright 2013-2020, A-JIE
-* Licensed under the MIT license
-* http://www.opensource.org/licenses/mit-license
-*
-*/
-
-/*!
-* RAFManager v0.1.0
-*
-* Copyright 2018-2018, ajiemath <ajiemath@gmail.com>
-* Licensed under the MIT license
-* http://www.opensource.org/licenses/mit-license
-*
-*/
 
 /**
    * @license

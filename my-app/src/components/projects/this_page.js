@@ -18,7 +18,7 @@ class this_page extends Component {
                         This is due to a mixture of narrow scope covered in the course, shallow depth of content, and of course also a good dose of imposter syndrome :')</p>
                     <br></br>
                     <p>
-                    To try put some of the new knowledge to work though, I embarked on building this site out using the React.js framework for the backend/middleware and Material Design Lite (MDL) for the frontend theme. 
+                    To try put some of the new knowledge to work though, I embarked on building this site out using the React.js framework, initially themed with Material Design Lite (MDL) before later ripping that out in favour of a hand-rolled custom CSS design system.
                     Having used Shopify and Squarespace before, it felt good to have complete control over customisation despite the extra work required to setup even the most mundane things.
                     </p>
 
@@ -26,7 +26,7 @@ class this_page extends Component {
                     <hr></hr>
                     <ul>
                     <li><strong>Interoperability is a nightmare</strong></li>
-                    <p>Making sure all design elements are supported by common browsers (and resize correctly), is something that I think most people take for granted when visitng websites.
+                    <p>Making sure all design elements are supported by common browsers (and resize correctly), is something that I think most people take for granted when visiting websites.
                     The sheer effort required to create a seamless experience across mobile + tablet + desktop browser(s) is staggering. 
                     For the most part I implemented some flex grids and called it a day :)</p>
                     <li><strong>The cascade in CSS is real</strong></li>
@@ -34,7 +34,7 @@ class this_page extends Component {
                     Finally perfecting a CSS palette and rolling it out across all pages with a click, is a joyful experience.
                     <li><strong>It's turtles all the way down</strong></li>
                     One of the most frustrating things when trying to really understand why something doesn't work, is chasing the bug through layers and layers of abstraction.
-                    My experience with debugging C# and Python apps, led me to become complacent in being able to generally only need to step a few layers/dependences down to figure out why X input gives Y results.
+                    My experience with debugging C# and Python apps, led me to become complacent in being able to generally only need to step a few layers/dependencies down to figure out why X input gives Y results.
                     However, with React.js and HTML/CSS, often times weird behaviour is significantly more difficult to understand and fix.
                     <li><strong>Readability and commenting across languages </strong></li>
                     Simply, I found commenting in JS/HTML/CSS a pain.
@@ -58,7 +58,7 @@ class this_page extends Component {
 
                     <h3>Fancy Certificate</h3>
                     <hr></hr>
-                    <em><b>Note</b> - I did this course early 2022, and there's since been an extra quiz and seperate Git section added.
+                    <em><b>Note</b> - I did this course early 2022, and there's since been an extra quiz and separate Git section added.
                         Hopefully future me will get around to updating this certificate after completing the 2 new extra sections...
                     </em>
                     <div class='resizeable-container'>

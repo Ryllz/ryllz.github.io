@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from '../layout';
 import { Link } from 'react-router-dom';
 class PlateConveyor extends Component {
     render() {
@@ -25,12 +25,12 @@ class PlateConveyor extends Component {
                     <ul>
                         <li><b>No control over part size and geometry</b></li>
                         <p>Since the parts being placed on the conveyor are fed from a <Link to="/projects/hydraulic_systems">K5600 plasma cutting machine</Link>, the combination of parts wildly varies from job to job.</p>
-                        <p>This meant that the conveyor design needed to accomodate even the most troublesome parts (generally long snaggly strips).</p>
+                        <p>This meant that the conveyor design needed to accommodate even the most troublesome parts (generally long snaggly strips).</p>
                         <li><b>No access restrictions possible</b></li>
-                        <p>As the conveyor fed a parts bin/crate which needed emptying by an operator, it was impossible to fully</p>
+                        <p>As the conveyor fed a parts bin/crate which needed emptying by an operator, it wasn't possible to fully fence off or physically bar access to the moving parts.</p>
                         <li><b>Limited reliance on administrative controls</b></li>
-                        <p>As the conveyor fed a parts bin/crate which needed emptying by an operator, it was impossible to fully remove the need for operator proximity to the machine.</p>
-                        <p>Of course, the standard operating procedur (SOP) is to turn the .</p>
+                        <p>Following from the above, it was impossible to fully remove the need for operator proximity to the machine.</p>
+                        <p>Of course, the standard operating procedure (SOP) is to turn the machine off before reaching in - but people are people, and relying on that alone is asking for trouble.</p>
                         <li><b>No useful PPE controls to fall back on </b></li>
                         <p>Unfortunately due to the torque required to do it's job, the conveyor motor wouldn't hesitate to shred an appendage with or without even the sturdiest of safety gloves.</p>
                     </ul>
@@ -38,10 +38,10 @@ class PlateConveyor extends Component {
                     <Cell col={12}>
                     <p>So how did we overcome this challenge? By following the "Elimination > Substitution > Engineering Controls > Admin. Controls > PPE" hierarchy of controls:</p>
                     <br></br>
-                    <p>First and foremost we <b>eliminated</b> any hazards we could via design; for example, the heeby-jeeby inducing picture to the left (on the in-feed side of the conveyor) in particular was safely guarded away under a brighly hazard striped cover to prevent any plausible hand insertion near that zone.</p>
+                    <p>First and foremost we <b>eliminated</b> any hazards we could via design; for example, the heeby-jeeby inducing picture to the left (on the in-feed side of the conveyor) in particular was safely guarded away under a brightly hazard striped cover to prevent any plausible hand insertion near that zone.</p>
                     <br></br>
                     <p>Next, we <b>substituted</b> any components which could cause a snag hazard, and any components which required servicing were substituted with the alternatives with longest interval options possible. 
-                    For example, instead of using standard steel flat bar (which would cause even larger gaps that could entrap appendages) they were substituted with profile cut bars of flush fit size. Bearing support bloks were also substituted with versions where all grease points are facing outwards and away.
+                    For example, instead of using standard steel flat bar (which would cause even larger gaps that could entrap appendages) they were substituted with profile cut bars of flush fit size. Bearing support blocks were also substituted with versions where all grease points are facing outwards and away.
                     </p>
                     <br></br>
                     <p>Lastly, <b>engineering controls</b> were implemented in the form of guard rails + integrating an additional E-stop system (in addition to the standard perimeter pull-rope) within in the area the operator was most likely to be - the outfeed area.

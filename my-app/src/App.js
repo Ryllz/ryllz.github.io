@@ -1,134 +1,156 @@
-//import logo from './logo.svg';
-import React from 'react';
-import { FooterSection, Footer, Drawer, Layout, Header, HeaderRow, Navigation, Content } from 'react-mdl';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import Main from './components/main';
-import { Link } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import Modal from 'react-modal';
-import { Button } from 'react-mdl';
 import CircleLoader from 'react-spinners/CircleLoader';
 
 function App() {
-
     const modalStyle = {
         content: {
-          top: '50%',
-          left: '50%',
-          right: 'auto',
-          bottom: 'auto',
-          marginRight: '-50%',
-          transform: 'translate(-50%, -50%)',
-          'text-align': 'center',
-          'border-radius': '25px',
-          'background-color': '#787878',
-          color: '#e8e8e8',
+            top: '50%',
+            left: '50%',
+            right: 'auto',
+            bottom: 'auto',
+            marginRight: '-50%',
+            transform: 'translate(-50%, -50%)',
+            textAlign: 'center',
+            borderRadius: '25px',
+            backgroundColor: '#787878',
+            color: '#e8e8e8',
         },
-        overlay: {zIndex: 1000}
-      };
+        overlay: { zIndex: 1000 }
+    };
 
-    const [loading, setLoading] = React.useState(false);
+    const [loading, setLoading] = useState(false);
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [modalIsOpen, setIsOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
-    React.useEffect(() => {
-		setLoading(true);
-		setTimeout(() => {
-			setLoading(false);
-		}, 1200);
-	}, []);
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => setLoading(false), 1200);
+    }, []);
 
-    let subtitle;
-    const [modalIsOpen, setIsOpen] = React.useState(false);
+    useEffect(() => {
+        const handleScroll = () => setScrolled(window.scrollY > 50);
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
-    function openModal() {
-        setIsOpen(true);
-    }
+    // Scroll-reveal: re-observe on every route change
+    useEffect(() => {
+        setMenuOpen(false);
 
-    function afterOpenModal() {
-        subtitle.style.color = '#f00';
-    }
-
-    function closeModal() {
-        setIsOpen(false);
-    }
-  
-    return (
-        <div className="navbar">
-            <Layout>
-                <Header waterfall className="header">
-                    <HeaderRow title={<Link to="/" className='name-link'>Ryllian Zhang</Link>}>
-                    </HeaderRow>
-                    <HeaderRow className='navRow'>
-                        <Navigation>
-                            <Link to="/resume">Resume</Link>
-                            <Link to="/projects">Projects</Link>
-                            <Link to="/contact">Contact</Link>
-                            <Link to="/blog">Blog</Link>
-                        </Navigation>
-                    </HeaderRow>
-                </Header>
-                <Drawer title="Ryllian Zhang">
-                    <Navigation>
-                        <Link to="/">Home</Link>
-                        <Link to="/resume">Resume</Link>
-                        <Link to="/projects">Projects</Link>
-                        <Link to="/contact">Contact</Link>
-                        <Link to="/blog">Blog</Link>
-                    </Navigation>
-                </Drawer>
-                    <Content>
-                        {loading ? (
-                        <div className="loader-container">
-                            <CircleLoader color={'#fff'} size={100} />
-                        </div>
-                        ) : (
-                        <div className="page-content"/>
-                        )}
-                        <Main/>
-                        <Footer size="mini" className="footer">
-                            <FooterSection type="left" logo="Copyright © Ryllian Zhang 2022">
-                            </FooterSection>
-                                <FooterSection type="right">
-                                <a onClick={openModal} style={{color: '#e8e8e8'}}>Attributions</a>
-                                <Modal
-                                    isOpen={modalIsOpen}
-                                    onAfterOpen={afterOpenModal}
-                                    onRequestClose={closeModal}
-                                    contentLabel="Attributions Modal"
-                                    style={modalStyle}
-                                >
-                                    <h3 style={{color: '#e8e8e8'}}>Thanks & credit to...</h3>
-                                    <div>
-                                        <li><a href="https://www.flaticon.com/free-icons/robot-arm" title="robot arm icons" style={{color: '#e8e8e8'}}>Robot arm icons created by Freepik - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/robot" title="robot icons" style={{color: '#e8e8e8'}}>Robot icons created by Eucalyp - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/cog" title="cog icons" style={{color: '#e8e8e8'}}>Cog icons created by Pause08 - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/python" title="python icons" style={{color: '#e8e8e8'}}>Python icons created by Nadiinko - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/automation" title="automation icons" style={{color: '#e8e8e8'}}>Automation icons created by Freepik - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/microsoft" title="microsoft icons" style={{color: '#e8e8e8'}}>Microsoft icons created by Freepik - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/html" title="html icons" style={{color: '#e8e8e8'}}>Html icons created by Freepik - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/css" title="css icons" style={{color: '#e8e8e8'}}>Css icons created by Freepik - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/javascript" title="javascript icons" style={{color: '#e8e8e8'}}>Javascript icons created by Smashicons - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/github" title="github icons" style={{color: '#e8e8e8'}}>Github icons created by riajulislam - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/print" title="print icons" style={{color: '#e8e8e8'}}>Print icons created by Freepik - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/diving" title="diving icons" style={{color: '#e8e8e8'}}>Diving icons created by istar_design_bureau - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/reading" title="reading icons" style={{color: '#e8e8e8'}}>Reading icons created by mangsaabguru - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/car" title="car icons" style={{color: '#e8e8e8'}}>Car icons created by Smashicons - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/hiking" title="hiking icons" style={{color: '#e8e8e8'}}>Hiking icons created by Smashicons - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/fishing" title="fishing icons" style={{color: '#e8e8e8'}}>Fishing icons created by wanicon - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/print" title="print icons" style={{color: '#e8e8e8'}}>Print icons created by Freepik - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/game-controller" title="game controller icons" style={{color: '#e8e8e8'}}>Game controller icons created by Freepik - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/c-sharp" title="c sharp icons" style={{color: '#e8e8e8'}}>C sharp icons created by Freepik - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/chaos" title="chaos icons" style={{color: '#e8e8e8'}}>Chaos icons created by Freepik - Flaticon</a></li>
-                                        <li><a href="https://www.flaticon.com/free-icons/repeat" title="repeat icons" style={{color: '#e8e8e8'}}>Repeat icons created by Freepik - Flaticon</a></li>
-                                    </div>
-                                    <br></br>
-                                    <Button onClick={closeModal}><b>Click anywhere to close</b></Button>
-                                    
-                                </Modal>
-                                </FooterSection>
-                            </Footer> 
-                        </Content>
-                </Layout>
-            </div>
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('in-view');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            { threshold: 0.07, rootMargin: '0px 0px -30px 0px' }
         );
-    }
+
+        const timer = setTimeout(() => {
+            const selectors = [
+                '.intro-box', '.project-box', '.blog-box',
+                '.resume-grid',
+                '.tab-content', '.blog-content',
+                '.fancy-title-card', '.fancy-title-card2',
+                '.password-gate-card',
+                '.tabs-container',
+                'h1.title', '.project-tabs h2', '.project-tabs > p',
+                'hr.short1'
+            ].join(', ');
+
+            document.querySelectorAll(selectors).forEach(el => {
+                if (!el.closest('.hero') && !el.closest('.resume-grid h1')) {
+                    observer.observe(el);
+                }
+            });
+        }, 60);
+
+        return () => {
+            clearTimeout(timer);
+            observer.disconnect();
+        };
+    }, [location.pathname]);
+
+    return (
+        <div className="app">
+            <nav className={`navbar${scrolled ? ' scrolled' : ''}`}>
+                <NavLink to="/" end className="nav-brand">Ryllian Zhang</NavLink>
+                <button
+                    className={`nav-hamburger${menuOpen ? ' open' : ''}`}
+                    onClick={() => setMenuOpen(!menuOpen)}
+                    aria-label="Menu"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <div className={`nav-links${menuOpen ? ' open' : ''}`}>
+                    <NavLink to="/resume" onClick={() => setMenuOpen(false)}>Resume</NavLink>
+                    <NavLink to="/projects" onClick={() => setMenuOpen(false)}>Projects</NavLink>
+                    <NavLink to="/contact" onClick={() => setMenuOpen(false)}>Contact</NavLink>
+                    <NavLink to="/blog" onClick={() => setMenuOpen(false)}>Blog</NavLink>
+                </div>
+            </nav>
+
+            {loading && (
+                <div className="loader-container">
+                    <CircleLoader color={'#fff'} size={100} />
+                </div>
+            )}
+
+            <main className="page-content">
+                <Main />
+            </main>
+
+            <footer className="app-footer">
+                <span>Copyright &copy; Ryllian Zhang 2022</span>
+                <a onClick={() => setIsOpen(true)}>Attributions</a>
+                <Modal
+                    isOpen={modalIsOpen}
+                    onRequestClose={() => setIsOpen(false)}
+                    contentLabel="Attributions Modal"
+                    style={modalStyle}
+                >
+                    <h3 style={{ color: '#e8e8e8' }}>Thanks &amp; credit to...</h3>
+                    <div>
+                        <li><a href="https://www.flaticon.com/free-icons/robot-arm" style={{ color: '#e8e8e8' }}>Robot arm icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/robot" style={{ color: '#e8e8e8' }}>Robot icons created by Eucalyp - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/cog" style={{ color: '#e8e8e8' }}>Cog icons created by Pause08 - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/python" style={{ color: '#e8e8e8' }}>Python icons created by Nadiinko - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/automation" style={{ color: '#e8e8e8' }}>Automation icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/microsoft" style={{ color: '#e8e8e8' }}>Microsoft icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/html" style={{ color: '#e8e8e8' }}>Html icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/css" style={{ color: '#e8e8e8' }}>Css icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/javascript" style={{ color: '#e8e8e8' }}>Javascript icons created by Smashicons - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/github" style={{ color: '#e8e8e8' }}>Github icons created by riajulislam - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/print" style={{ color: '#e8e8e8' }}>Print icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/diving" style={{ color: '#e8e8e8' }}>Diving icons created by istar_design_bureau - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/reading" style={{ color: '#e8e8e8' }}>Reading icons created by mangsaabguru - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/car" style={{ color: '#e8e8e8' }}>Car icons created by Smashicons - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/hiking" style={{ color: '#e8e8e8' }}>Hiking icons created by Smashicons - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/fishing" style={{ color: '#e8e8e8' }}>Fishing icons created by wanicon - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/game-controller" style={{ color: '#e8e8e8' }}>Game controller icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/c-sharp" style={{ color: '#e8e8e8' }}>C sharp icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/chaos" style={{ color: '#e8e8e8' }}>Chaos icons created by Freepik - Flaticon</a></li>
+                        <li><a href="https://www.flaticon.com/free-icons/repeat" style={{ color: '#e8e8e8' }}>Repeat icons created by Freepik - Flaticon</a></li>
+                    </div>
+                    <br />
+                    <button className="btn btn-primary" onClick={() => setIsOpen(false)}>
+                        <b>Click anywhere to close</b>
+                    </button>
+                </Modal>
+            </footer>
+        </div>
+    );
+}
 
 export default App;
