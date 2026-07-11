@@ -11,9 +11,9 @@ class DaisyWheelStamper extends Component {
                 <p>For me this project stands out (as given away by the title) because it was the first application of some obscure course content learned during University.</p>
                 <p>I specifically recall learning about force calculations for deforming metals in stamping, struggling and thinking: <em>"this is useless, what kind of chump still designs custom stamps from first principles"</em>. <br></br>Yet here I was a couple years out...the chump designing stamps :')</p>
                 <br></br>
-                The primary requirements of the project was to stamp alphanumeric sequences into very hard grades of steel (with also a last minute request to try accomodate Iconel) and to do so in any horizontal orientation.
+                The primary requirements of the project was to stamp alphanumeric sequences into very hard grades of steel (with also a last minute request to try accommodate Inconel) and to do so in any horizontal orientation.
                 <br></br>
-                In terms of the stamp capacity, the exact count escapes me, but I believe it was north of 30 to accomodate the english alphabet plus numerals and some punctuation/symbols.
+                In terms of the stamp capacity, the exact count escapes me, but I believe it was north of 30 to accommodate the english alphabet plus numerals and some punctuation/symbols.
                 </p>
                 <br></br>
                 <p>A significant amount of time was spent working with a stamp vendor on getting the correct letter typeface and font, in order to minimise the forces required. <br></br>
@@ -39,7 +39,7 @@ class DaisyWheelStamper extends Component {
                     However, this tool had to index as fast as possible in order to stamp at the speeds required, so bearings were selected.<br></br>
                     Very very heavy duty roller bearings on the wheel, and combined needle/roller bearings for the fork.</p>
                     <li><b>"R" is one of the hardest letters to stamp clearly</b></li>
-                    <p>During a design review meetings, was jokingly hazed for populating the production CAD model wheel with all "R" stamps as an egotistic way of inserting my initials. <br></br>
+                    <p>During a design review meeting, I was jokingly hazed for populating the production CAD model wheel with all "R" stamps as an egotistic way of inserting my initials. <br></br>
                     ...but really it was mostly engineering reasons as it's one of the "worst case" stamps in terms of force requirement :)</p>
                     <li><b>Designed and built to last</b></li>
                     <p>Almost every component in the fork and wheel assembly was manufactured using 4340 steel with an intended safety factor >3.<br></br>

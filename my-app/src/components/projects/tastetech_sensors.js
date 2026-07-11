@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from '../layout';
 
 class taste_tech extends Component {
         render() {
@@ -10,7 +10,7 @@ class taste_tech extends Component {
                     <Grid>
                         <Cell col={3} phone={12} style={{'text-align': 'center'}}>
                         <img src={'/tastetech1.png'} width="90%" style={{'vertical-align':'middle'}} class='inline-img'></img>
-                        <figcaption><em>A bunch of Tastetech 'T2' units on an apple line</em></figcaption>
+                        <figcaption><em>Tastetech 'T2' units on an apple sorting line</em></figcaption>
                         </Cell>
                         <Cell col={9} phone={12} style={{'text-align':'top', margin: 'auto'}}>
                             <p>My first real job graduating university was at Taste Technologies, a small startup offshoot of Compac Sorting Equipment which focused on sensor equipment related to characterising internal qualities of a piece of fruit/produce.</p>
@@ -18,7 +18,7 @@ class taste_tech extends Component {
                             <br></br>
                             <p>To summarise as concisely as possible, I've broken down the 3 main product lines I contributed to below with some brief descriptions.</p>
                             <br></br>
-                            <p><b>Please note, this page has been written almost a decade after working on the projects in question. </b><br></br> Certain details may be a bit fuzzy due to NDAs, others due to just plain poor memory!</p>
+                            <p><b>Please note, this page was written almost a decade after working on the projects in question. </b><br></br> Certain details may be a bit fuzzy due to NDAs - others due to just plain poor memory.</p>
                         </Cell>
                         <Cell col={12}><hr/></Cell>
                         <Cell col={2} phone={12} style={{'text-align': 'center'}}>
@@ -53,7 +53,7 @@ class taste_tech extends Component {
                         </Cell>
                         <Cell col={7} phone={12} style={{'text-align':'top', margin: 'auto'}}>
                             <h3>Prototyping & Experimentation</h3>
-                            <p>There was a lot of cool cutting edge research I had the priviledge of working on. What stands out though, was a prototype system which enabled non-contact measurement of firmness; loosely working by the following principles:</p>
+                            <p>There was a lot of cool cutting edge research I had the privilege of working on. What stands out though, was a prototype system which enabled non-contact measurement of firmness; loosely working by the following principles:</p>
                             <ol>
                                 <li>Hit the fruit with an air blast (dramatically simplifying the work here)</li>
                                 <li>Measure vibration response of the fruit using a vibrometer</li>
@@ -72,7 +72,7 @@ class taste_tech extends Component {
                             <br></br>
                             <p>A very notable experience was a last minute trial on one particular visit, which involved verifying the sensor data and statistical model on some oranges. The aftermath being the photo on the left.</p>
                             <br></br>
-                            <p>Naturally I cleaned the scene thoroughly before I left - but a part of me did wonder what kind of list I'd get put on for leaving behind a bathtub full of numbered and destroyed oranges...</p>
+                            <p>Naturally I cleaned the scene thoroughly before I left - but a part of me did wonder what kind of list I'd get put on if I hadn't...</p>
                         </Cell>
                         <Cell col={12}><hr/></Cell>
                     </Grid>

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from '../layout';
 import { Link } from 'react-router-dom';
 
 class csharp_solidworks extends Component {
@@ -9,7 +9,7 @@ class csharp_solidworks extends Component {
                 <h2>Leapfrogging technical debt</h2>
                     <hr/>
                     <p>Almost every engineer I've worked with and spoken to understands the concept of technical debt - when we take shortcuts, skip processes and just generally do things which delay an inevitable reckoning.</p>
-                    <p>Some of my biggest contributions at all my contributions were in developing tools to combat this; either pre-emptively or retroactively.</p>
+                    <p>Some of my biggest contributions across all my roles were in developing tools to combat this; either pre-emptively or retroactively.</p>
                     <p>Below is a few of the key items I've developed during my career:</p>
                     <ul>
                         <li><b>SolidWorks add-ons</b></li>

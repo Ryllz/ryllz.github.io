@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from '../layout';
 
 class engagement_ring_box extends Component {
         render() {
@@ -20,7 +20,7 @@ class engagement_ring_box extends Component {
                         I started this project in Fusion360 as it was free for hobbyist use (not anymore though I think?). 
                         I was pleasantly surprised by the user friendliness of the CAM module; beating out edgeCAM, NX CAM, MasterCAM and CAMWorks for UX. 
                         While to achieve this it cuts a lot of advanced settings for surfacing and milling cycles, this is a good compromise in my opinion (as that a lot of it was clutter anyways for 1% edge case operations).</p>
-                    <p>3D printing gear profiles on an resin jet printer was however a huge pain, for a few reasons:</p>
+                    <p>3D printing gear profiles on a resin jet printer was however a huge pain, for a few reasons:</p>
                     <ul>
                         <li>Unpredictable warpage from water absorption during the wash processes</li>
                         <li>When printing with a gloss finish, the "flashing" from the matte support areas messes with uniformity of the gear profile.</li>

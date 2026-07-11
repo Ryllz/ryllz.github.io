@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from '../layout';
 
 class M100CAM extends Component {
     render() {
@@ -31,7 +31,7 @@ class M100CAM extends Component {
                     <p>During my entire time as the sole CAM person, the most common mistakes always occur during drilling.</p>
                     <p>Despite the simplicity of the generated drill paths, the speed/feed and depth are by far the most critical and yet easy to get wrong (esp. as drilling & tapping paths are overlaid). Likewise drilling into a misplaced weld or baffle is a constant concern.</p>
                     <li><strong>When in doubt, ask the experts</strong></li>
-                    <p>When I first started in this role I was confident that I could figure everything out from the technical sheets and calculators, and spent an extraodinary amount of time populating tool library data which was promptly discarded.</p>
+                    <p>When I first started in this role I was confident that I could figure everything out from the technical sheets and calculators, and spent an extraordinary amount of time populating tool library data which was promptly discarded.</p>
                     <p>I quickly discovered it was far more efficient to rely more on feedback from the operator and the application engineers at Kennametal (our primary tooling supplier).</p>
                     <li><strong>Be kind and mindful of the operator</strong></li>
                     <p>
@@ -60,7 +60,7 @@ class M100CAM extends Component {
                     <br></br>
                     Unfortunately this strategy doesn't work so well when the feature requires an hour to update the generated path when a setting is changed.
                     <br></br>
-                    This was a major challenge during the milling paths I worked on for large foil moulds for the company owner's carbon fibre racing catamaran, which we addressed by 1. 
+                    This was a major challenge during the milling paths I worked on for large foil moulds for the company owner's carbon fibre racing catamaran, which we addressed by batching the heaviest toolpath regenerations to run overnight rather than iterating on them live.
                     </p>
                 </ul>
                 <h3>Video</h3>

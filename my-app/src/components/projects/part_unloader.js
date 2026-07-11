@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from '../layout';
 class PartUnloader extends Component {
     render() {
         return(
@@ -29,7 +29,7 @@ class PartUnloader extends Component {
                         <h4>With Unloader</h4>
                         <ol>
                         <li>Plates to be processed are loaded onto the cutting bed via crane</li>
-                        <li>Job is run and parts are cut on the first plate plate</li>
+                        <li>Job is run and parts are cut on the first plate</li>
                         <li>Cutting gantry starts processing parts from the next plate, <b>while</b> unloader picks out cut parts from the finished plate and places them onto pallet stations</li>
                         <li>Cut plate skeleton is removed and a fresh new plate loaded via crane, <b>while</b> cutting gantry is uninterrupted</li>
                         <li>Repeat step 3-4 until consumables require changing</li>
@@ -57,8 +57,8 @@ class PartUnloader extends Component {
                     <p>These systems were all tied together by some brilliant programming from the software team, dynamically adjusting zones and platform behaviour.</p>
                     <p>All in all, with all the dynamic logic and electro-mechanical safety systems added, at the end of the project it felt like we'd almost built an AGV on rails!</p>
                     <li><b>Electromagnets are magic when applied correctly</b></li>
-                    <p>A significant effort was involved in learnign about and sourcing electromagnets with the right mix of properties; shape, pickup force, temperature resistance etc.</p>
-                    <p>In addition to the magnets themselves, they needed to be mounted with enough flex to accomodate natural plate deflection between each magnet due to gravity.</p>
+                    <p>A significant effort was involved in learning about and sourcing electromagnets with the right mix of properties; shape, pickup force, temperature resistance etc.</p>
+                    <p>In addition to the magnets themselves, they needed to be mounted with enough flex to accommodate natural plate deflection between each magnet due to gravity.</p>
                     <p>Without this flex system (which also needs to reset after each pickup), pickup payload is significantly reduced due to "peeling" effect.</p>
                 </ul>
                 <h3>Video</h3>

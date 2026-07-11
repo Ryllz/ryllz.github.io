@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Cell } from 'react-mdl';
+import { Grid, Cell } from '../layout';
 import { Link } from 'react-router-dom';
 
 class laser_turret extends Component {
@@ -13,7 +13,7 @@ class laser_turret extends Component {
                         After settling on some XiaoMi cameras due to price, the feature I found lacking most was a face/human figure tracker.
                     <br></br></p>
                     <p>It was a bit baffling that a motorized 360 degree camera didn't offer this feature - after all, what good is the coverage if an intruder can just walk off frame?<br></br>
-                    Naturally I figured I'd try build my own camera turret and learn a some more about machine vision in the process.
+                    Naturally I figured I'd try build my own camera turret and learn some more about machine vision in the process.
                     <br></br></p>
                     <br></br>
                     <p>The build consisted of the key components below:
@@ -47,7 +47,7 @@ class laser_turret extends Component {
                     I didn't feel that I learned/understood as much "under the hood" as I'd expected, as so much was nicely and neatly packaged up by OpenCV and Dlib.
                     </p>
                     <p>
-                    Of course nothing stops me from diving as deep as a want - but the difficulty curve felt like a sheer cliff once the layers are peeled back. 
+                    Of course nothing stops me from diving as deep as I want - but the difficulty curve felt like a sheer cliff once the layers are peeled back.
                     </p>
                     <p>
                     I quickly realised this wasn't really a field I was particularly wanting (or even intellectually capable) to do a PhD in, which played a big part in placing this project on hiatus.
