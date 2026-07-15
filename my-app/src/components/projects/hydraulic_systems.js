@@ -34,15 +34,15 @@ class PlateDragga extends Component {
                 <br></br>
                 The sections below are just some design notes and general comments on some of the unique/integral features of the machine.
 
-                <h3 style={{'background-color':'#A9A9A9', padding:'0.2em'}}>Lift platform hydraulics</h3>
+                <h3>Lift platform hydraulics</h3>
                 <p>During post-processing operations such as drilling or stamping, up to a few tons of load can be applied to just one side of the cutting platform.</p>
                 <p>As the cutting platform is held up by a cylinder on each side, this uneven loading obviously isn't favourable for producing accurate results.</p>
                 <p>Before getting into this project, I vastly under-appreciated the system complexity required in heavy machinery just to lift a platform evenly...</p>
-                <img src={'/cylinder_synch.png'} width="50%" style={{'vertical-align':'middle'}} class='inline-img'></img>
+                <img src={'/cylinder_synch.png'} alt='Diagram of hydraulic cylinder synchronization for the lift platform' width="50%" style={{verticalAlign:'middle'}} className='inline-img'/>
                 <p>To prevent the cutting platform on the K5600 machine from dropping even a fraction of a mm on either side, we implemented both hydraulic and mechanical means of synchronizing cylinder motion.</p>
                 <p>On the hydraulics end we used a dual vane pump style flow divider, and for the mechanical aspect it was a extremely rigid cross-shaft rack/pinion system that spans across the table.</p>
 
-                <h3 style={{'background-color':'#A9A9A9', padding:'0.2em'}}>Gripper system design</h3>
+                <h3>Gripper system design</h3>
                 <p>
                 The early machines featured a primary feed robot with 2 to 3 grippers, alongside 1 or 2 independent side gripper carriages to assist.
                 <br></br>
@@ -51,23 +51,23 @@ class PlateDragga extends Component {
                 Essentially, the plate would be moved by a combination of these gripper "robots" to provide the necessary motion to cut in the X axis, whilst the fixed gantry had processing tools attached that traversed in Y + Z axis.
                 </p>
                 <h4>Some neat features in the designs of these grippers:</h4>
-                <p>
+                <ul>
                 <li><b>The rear grippers can all individually retract</b></li>
-                Required to dynamically ungrip and position away to allow clearance for bevelled cutting processes (and also significantly reduce wastage as parts can thus be cut right up to the edge of the processed plate).
+                <p>Required to dynamically ungrip and position away to allow clearance for bevelled cutting processes (and also significantly reduce wastage as parts can thus be cut right up to the edge of the processed plate).
                 <br></br>
-                For serviceability each gripper can also be removed from the front in a cartridge-like bolt-on assembly.
+                For serviceability each gripper can also be removed from the front in a cartridge-like bolt-on assembly.</p>
                 <li><b>The side grippers freely pivot</b></li>
-                This additional axis of rotational up/down movement is to allow easier grip/un-grip of the processed plate as it's cut.
+                <p>This additional axis of rotational up/down movement is to allow easier grip/un-grip of the processed plate as it's cut.</p>
                 <li><b>Gripper geometry and force multiplication</b></li>
-                To keep the grippers low profile and still able to apply a consistent clamping force across a large range of plate thickness, a pivoting "jaw" style design was used as opposed to a more direct and traditional pancake cylinder.
-                This design provides for higher perpendicular clamping force component at larger openings (i.e. thicker, heavier plates) and lower perpendicular force component with smaller openings (thinner plates).
+                <p>To keep the grippers low profile and still able to apply a consistent clamping force across a large range of plate thickness, a pivoting "jaw" style design was used as opposed to a more direct and traditional pancake cylinder.
+                This design provides for higher perpendicular clamping force component at larger openings (i.e. thicker, heavier plates) and lower perpendicular force component with smaller openings (thinner plates).</p>
                 <li><b>Hydraulic hose routing</b></li>
-                Underneath the steel skin of the rear gripper assembly, is a series of hydraulic hose loops, UHMWPE guides/supports and valve mounts.
+                <p>Underneath the steel skin of the rear gripper assembly, is a series of hydraulic hose loops, UHMWPE guides/supports and valve mounts.
                 <br></br>
-                The bend radii of the hose, as well as the fitting clearances and motion allowance, required a huge amount of attention to detail to package successfully into such a tight form factor.
-                </p>
+                The bend radii of the hose, as well as the fitting clearances and motion allowance, required a huge amount of attention to detail to package successfully into such a tight form factor.</p>
+                </ul>
 
-                <h3 style={{'background-color':'#A9A9A9', padding:'0.2em'}}>Cool Features + Lessons Learned</h3>
+                <h3>Cool Features + Lessons Learned</h3>
                 <p>
                 <h4>Brass lined cutting chamber</h4>
                 <p>Plasma cutting is messy - especially the initial "pierce" as the plasma torch penetrates the plate to begin cutting. 
@@ -77,7 +77,7 @@ class PlateDragga extends Component {
                 To address this, the entire chamber is lined with a replaceable set of folded brass sheet lining; providing a relatively non-stick surface.
                 <br></br>
                 Looking inside this chamber while a plasma cut is initiated is an awesome sight to see - bursts of golden light and stream of fireworks:
-                <img src={'/k5600_cut1.png'} width="50%" style={{'vertical-align':'middle'}} class='inline-img'></img>
+                <img src={'/k5600_cut1.png'} alt='Plasma cut initiated inside the brass-lined cutting chamber of the K5600' width="50%" style={{verticalAlign:'middle'}} className='inline-img'/>
                 </p>
                 <h4>Always always check the center of mass</h4>
                 One of my responsiblities towards the conclusion of a project is to provide the container layout schematics on how to pack an entire disassembled machine into 40ft/20ft shipping containers.
@@ -93,8 +93,8 @@ class PlateDragga extends Component {
                 <br></br>
                 It was the perfect recipe for extreme tool wear and vibrations, so reliably hitting the high standards seen in the final platform was a major achievement.
                 </p>
-                <h3 style={{'background-color':'#A9A9A9', padding:'0.2em'}}>Video</h3>
-                <iframe style={{'padding-bottom':'2em'}} width="560" muted="true" height="315" src="https://www.youtube.com/embed/nOyjXuZbA7M?start=31" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h3>Video</h3>
+                <iframe style={{paddingBottom:'2em'}} width="560" muted="true" height="315" src="https://www.youtube.com/embed/nOyjXuZbA7M?start=31" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
         )
     }

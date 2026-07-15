@@ -112,7 +112,7 @@ function App() {
             </main>
 
             <footer className="app-footer">
-                <span>Copyright &copy; Ryllian Zhang 2022</span>
+                <span>Copyright &copy; Ryllian Zhang {new Date().getFullYear()}</span>
                 <a onClick={() => setIsOpen(true)}>Attributions</a>
                 <Modal
                     isOpen={modalIsOpen}

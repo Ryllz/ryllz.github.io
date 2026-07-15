@@ -9,12 +9,12 @@ class euler_angles extends Component {
                     <hr/>
                     <Grid>
                         <Cell col={4} phone={12}>
-                        <img src={'/Meca500.jpg'} width="90%" style={{'padding':'auto'}} class='inline-img'></img> <br></br>
+                        <img src={'/Meca500.jpg'} alt='The compact and versatile Mecademic Meca500 robot' width="90%" style={{'padding':'auto'}} className='inline-img'/> <br></br>
                         <em>The amazingly compact and versatile Meca500</em>
-                        <img src={'/euler_angles.png'} width="90%" style={{'padding':'auto'}} class='inline-img'></img>    
+                        <img src={'/euler_angles.png'} alt='Wikipedia diagram illustrating Euler angles' width="90%" style={{'padding':'auto'}} className='inline-img'/>    
                         <em>Wikipedia diagram on Euler angles. Super clear and intuitive /s</em>  
                         </Cell>
-                        <Cell col={8} phone={12} style={{'text-align':'top', margin: 'auto'}}>
+                        <Cell col={8} phone={12} style={{textAlign:'top', margin: 'auto'}}>
                             <h4>Background</h4>
                             <p>One of the projects I undertook during my time at Apple was to try and improve the accuracy of some Mecademic Meca500 R3 robots.</p>
                             <p>During the course of improving the performance of some pick/place type test cells, I'd resolved most of the other "low hanging fruit" in the error stack which were mostly fixture design improvements.</p>
@@ -42,18 +42,18 @@ class euler_angles extends Component {
                             <p>As the accuracy of a robot movement heavily depends on the accurate definition of the tool "tip" location and any key work area co-ordinates, attempting to set these values manually would be an extremely tedious process; hence the need for an automated tool to accomplish this.</p>
                           
                             </Cell>
-                            <Cell col={12} style={{'text-align':'top', margin: 'auto'}}>
+                            <Cell col={12} style={{textAlign:'top', margin: 'auto'}}>
                          
                             <h4>How?</h4>
                             <p>So what I wanted to cover in this post (and will hopefully help anyone who stumbles on this via googling Euler angles for a Meca500), is how do we arrive at the general solution presented on that page? <br></br>I hope you enjoy the following refresher in trigonometric functions/identities :)</p>
                             <hr></hr>
-                            <img src={'/meca_euler_1.PNG'} width="90%" style={{'padding':'auto'}} class='inline-img'></img>
+                            <img src={'/meca_euler_1.PNG'} alt='Euler angle derivation, part 1' width="90%" style={{'padding':'auto'}} className='inline-img'/>
                             <hr></hr>
-                            <img src={'/meca_euler_2.PNG'} width="90%" style={{'padding':'auto'}} class='inline-img'></img>
+                            <img src={'/meca_euler_2.PNG'} alt='Euler angle derivation, part 2' width="90%" style={{'padding':'auto'}} className='inline-img'/>
                             <hr></hr>
-                            <img src={'/meca_euler_3.PNG'} width="90%" style={{'padding':'auto'}} class='inline-img'></img>
+                            <img src={'/meca_euler_3.PNG'} alt='Euler angle derivation, part 3' width="90%" style={{'padding':'auto'}} className='inline-img'/>
                             <hr></hr>
-                            <img src={'/meca_euler_4.PNG'} width="80%" style={{'padding':'auto'}} class='inline-img'></img>
+                            <img src={'/meca_euler_4.PNG'} alt='Euler angle derivation, part 4' width="80%" style={{'padding':'auto'}} className='inline-img'/>
                             <hr></hr>
                             <p>While I can't dive too much into the application I did specifically (most of it to do with re-creating the OEM web UI with pyQT to wrap the calibration functions), <a href="https://support.mecademic.com/support/solutions/articles/64000248048-how-do-i-calculate-the-wrf-using-a-3-point-method-">this article from Mecademic expresses the 2/3 of the core logic much more elegantly.</a></p>
                         </Cell>

@@ -5,9 +5,8 @@ class Projects extends Component {
     render() {
         return(
             <div className="project-tabs">
-                <h2 style={{textAlign:'center', marginBottom:'10px'}}>Personal Projects</h2>
+                <h2 className="section-title">Personal Projects</h2>
                 <p style={{textAlign:'center'}}><em>Small bits and pieces that have added to my engineering experience</em></p>
-                <hr className="short1"/>
                 <div className='project-box'>
                     <div className='grid-row project-grid'>
                         <div className="col-3">
@@ -101,9 +100,8 @@ class Projects extends Component {
                     </div>
                 </div>
                 <br/>
-                <h2 style={{textAlign:'center', marginBottom:'10px'}}>Professional Projects</h2>
-                <p style={{textAlign:'center'}}><em>...or at least, the few not covered by NDAs!</em></p>
-                <hr className="short1"/>
+                <h2 className="section-title">Professional Projects</h2>
+                <p style={{textAlign:'center'}}><em>...or at least, the few not covered by NDAs</em></p>
                 <div className='project-box'>
                     <div className='grid-row project-grid'>
                         <div className="col-3">

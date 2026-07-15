@@ -11,7 +11,7 @@ class RightToRepair extends Component {
                     <p>I would describe myself as a big supporter but I can definitely see why it's such a battle - plus it also makes my job difficult...</p>
                     <hr/>
                     <Grid>
-                        <Cell col={12} style={{'text-align':'top', margin: 'auto'}}>
+                        <Cell col={12} style={{textAlign:'top', margin: 'auto'}}>
                             <h3>Why it's important to me</h3>
                             <ul>
                                 <li>Charging insane markup on consumables and parts (to try and maximise profits on repairs) results in a lot of thrown away goods which could've lived longer.</li>
@@ -22,7 +22,7 @@ class RightToRepair extends Component {
                             </ul>
                             TL;DR - Environmentalism and independence.
                         </Cell>
-                        <Cell col={12} style={{'text-align':'top', margin: 'auto'}}>
+                        <Cell col={12} style={{textAlign:'top', margin: 'auto'}}>
                             <h3>Problems problems problems</h3>
                             <ul>
                                 <li>It's almost impossible to predict all the whacky issues which can arise from botched DIY jobs; this is super bad when it's safety related.</li>

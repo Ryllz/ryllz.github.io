@@ -61,8 +61,8 @@ class this_page extends Component {
                     <em><b>Note</b> - I did this course early 2022, and there's since been an extra quiz and separate Git section added.
                         Hopefully future me will get around to updating this certificate after completing the 2 new extra sections...
                     </em>
-                    <div class='resizeable-container'>
-                        <iframe src="/Coursera YQDRP53VVFA6.pdf" class="responsive-iframe"></iframe> 
+                    <div className='resizeable-container'>
+                        <iframe src="/Coursera YQDRP53VVFA6.pdf" title='IBM Full Stack Cloud Developer certificate' className="responsive-iframe"></iframe> 
                     </div>
                     <br></br>
                 </div>

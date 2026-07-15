@@ -50,7 +50,7 @@ class DaisyWheelStamper extends Component {
                 </ul>
                 <h3>Video</h3>
                 <hr/>
-                <iframe style={{'padding-bottom':'2em'}} width="560" height="315" src="https://www.youtube.com/embed/aby1Ti0bFpY" title="YouTube video player" frameborder="0" mute="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe style={{paddingBottom:'2em'}} width="560" height="315" src="https://www.youtube.com/embed/aby1Ti0bFpY" title="YouTube video player" frameBorder="0" mute="1" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
         )
     }

@@ -199,6 +199,8 @@ html { scroll-behavior: smooth; }
   }
   .nav-links.open { display: flex; }
   .nav-links a { font-size: 0.9rem; }
+  /* decorative resume icons: hide rather than compress once cramped */
+  .hide-narrow { display: none !important; }
 }
 
 /* === MAIN CONTENT === */
@@ -531,9 +533,13 @@ html { scroll-behavior: smooth; }
 
 /* === ICONS === */
 .ico-resume {
-  max-width: 2.75em;
+  width: 2.75em;
+  min-width: 2.75em;
+  flex-shrink: 0;
+  height: auto;
   padding: 0.5em;
   margin-right: 0.5em;
+  box-sizing: content-box;
 }
 
 .ico-print {
@@ -557,10 +563,33 @@ html { scroll-behavior: smooth; }
 }
 
 .ico-resume-interests {
-  max-width: 3em;
+  width: 2.25em;
+  min-width: 2.25em;
+  flex-shrink: 0;
+  height: auto;
   margin-left: 0.5em;
   margin-right: 0.5em;
   padding: 0.5em;
+  box-sizing: content-box;
+}
+
+/* Interests icons: fixed size, wrap instead of compressing */
+.interests-grid {
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.interests-grid > .col-2 {
+  flex: 0 0 auto;
+  max-width: none;
+  align-items: center;
+}
+
+/* Education logo: fixed size, don't compress the column */
+.edu-logo-cell {
+  flex: 0 0 auto;
+  max-width: none;
+  align-items: center;
 }
 
 /* === GALLERY === */
@@ -569,6 +598,26 @@ html { scroll-behavior: smooth; }
   min-width: 400px;
   min-height: 400px;
   height: 30vh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.gallery-card-image:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-3px);
+}
+
+.gallery-card-photo {
+  flex: 1 1 auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .gallery-card-image > .card-actions {
@@ -652,6 +701,13 @@ html { scroll-behavior: smooth; }
 
 .resume-grid .resume-intro .title {
   margin-top: 0.6em !important;
+}
+
+/* Resume/contact heading is excluded from the scroll-reveal observer,
+   so it must stay visible (otherwise it's stuck at opacity:0 + shifted). */
+.resume-grid h1.title {
+  opacity: 1;
+  transform: none;
 }
 
 .resume-intro table {
@@ -768,6 +824,59 @@ html { scroll-behavior: smooth; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
+}
+
+/* Article dividers — orange, fading left-to-right to match left-aligned content */
+.tab-content hr,
+.blog-content hr {
+  border: none;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(
+    90deg,
+    rgba(224, 123, 57, 0.55) 0%,
+    rgba(224, 123, 57, 0.28) 55%,
+    rgba(224, 123, 57, 0) 100%
+  );
+  margin: 1.4em 0;
+}
+
+.tab-content hr.low-margin,
+.blog-content hr.low-margin {
+  margin: 0.5em 0;
+}
+
+/* Article title divider (right under the <h2>) — brighter, same left-to-right fade */
+.tab-content h2 + hr,
+.blog-content h2 + hr {
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    #ff9633 0%,
+    rgba(224, 123, 57, 0.85) 35%,
+    rgba(224, 123, 57, 0.4) 70%,
+    rgba(224, 123, 57, 0) 100%
+  );
+}
+
+/* Sub-sections become distinct zones with an orange banner header */
+.tab-content h3 {
+  margin-top: 2.4em;
+  margin-bottom: 1.1em;
+  padding: 0.5em 0.85em;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: rgba(224, 123, 57, 0.09);
+}
+
+.tab-content h3 + hr {
+  display: none;
+}
+
+/* Breathing room between bolded "mini-heading" points within article lists */
+.tab-content li:has(> b),
+.tab-content li:has(> strong) {
+  margin-top: 1em;
 }
 
 .fancy-title-card2 {
@@ -910,17 +1019,26 @@ html { scroll-behavior: smooth; }
   font-weight: 700;
   color: var(--text);
   position: relative;
+  width: fit-content;
 }
 
 .skill-name::after {
   content: '';
   position: absolute;
   left: 0;
+  right: 0;
   bottom: 0;
-  width: 28px;
   height: 2px;
-  background: var(--accent);
   border-radius: 2px;
+  /* full text width, tapering into a fading tail */
+  background: linear-gradient(
+    90deg,
+    #ff9633 0%,
+    rgba(224, 123, 57, 0.85) 35%,
+    rgba(224, 123, 57, 0.4) 70%,
+    rgba(224, 123, 57, 0) 100%
+  );
+  filter: drop-shadow(0 2px 5px rgba(224, 123, 57, 0.45));
 }
 
 .skill-card .skill-body p {
@@ -937,6 +1055,92 @@ hr.short1 {
   margin: 0 auto 1.75em;
   width: 36px;
   padding-bottom: 0;
+}
+
+/* Section-heading accent underline — glowing bar, width tracks the heading text */
+h1.title.underline,
+.project-tabs h2.section-title {
+  display: block;
+  position: relative;
+  width: fit-content;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 0.5em;
+}
+
+h1.title.underline::after,
+.project-tabs h2.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 3px;
+  border-radius: 3px;
+  /* symmetric amber core fading to transparent ends */
+  background: linear-gradient(
+    90deg,
+    rgba(224, 123, 57, 0) 0%,
+    rgba(224, 123, 57, 0.7) 15%,
+    #ff9633 50%,
+    rgba(224, 123, 57, 0.7) 85%,
+    rgba(224, 123, 57, 0) 100%
+  );
+}
+
+/* glow on the underside only (starts at the line, extends downward) */
+h1.title.underline::before,
+.project-tabs h2.section-title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 28px;
+  pointer-events: none;
+  /* elliptical bloom, concentrated centrally, fading smoothly to nothing */
+  background: radial-gradient(
+    56% 100% at 50% 0%,
+    rgba(255, 150, 70, 0.4) 0%,
+    rgba(247, 135, 63, 0.27) 16%,
+    rgba(238, 130, 60, 0.17) 34%,
+    rgba(230, 126, 58, 0.1) 52%,
+    rgba(226, 124, 57, 0.045) 72%,
+    rgba(224, 123, 57, 0.015) 86%,
+    rgba(224, 123, 57, 0) 100%
+  );
+  animation: underline-glow 3.6s ease-in-out infinite;
+}
+
+@keyframes underline-glow {
+  0%, 100% { opacity: 0.82; }
+  50%      { opacity: 1; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1.title.underline::before,
+  .project-tabs h2.section-title::before { animation: none; }
+}
+
+h1.title.underline {
+  margin-bottom: 1.28em !important;
+}
+
+.project-tabs h2.section-title {
+  text-align: center;
+  color: var(--text);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: 1.2em;
+  margin-bottom: 0.9em;
+}
+
+/* subtitle caption under each section heading — space it from the grid below */
+.project-tabs > p {
+  margin-top: 0.4em;
+  margin-bottom: 1.2em;
 }
 
 hr.low-margin { margin: 0.2em; }
@@ -1045,11 +1249,9 @@ hr.low-margin { margin: 0.2em; }
 .blog-box,
 .resume-grid,
 .tab-content,
-.blog-content,
 .fancy-title-card,
 .fancy-title-card2,
 .password-gate-card,
-.tabs-container,
 h1.title,
 .project-tabs h2,
 .project-tabs > p,

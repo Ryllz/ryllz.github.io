@@ -36,74 +36,74 @@ class cnc_wood_router extends Component {
                     <hr/>
                     <Grid className='project-photo-grid'>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp" id="photo-card">
-                                <div class="mdl-card__title mdl-card--expand" style={{height: '30vh', background: 'url(/vfd_wiring_1.jpg) center / cover'}} >             
+                            <div className="gallery-card-image" id="photo-card">
+                                <div className="gallery-card-photo" style={{height: '30vh', background: 'url(/vfd_wiring_1.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">The VFD in the process of figuring out setup and wiring (AliExpress instructions weren't great)</span>
-                                </div>
-                            </div>
-                        </Cell>
-                        <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp" id="photo-card">
-                                <div class="mdl-card__title mdl-card--expand" style={{height: '30vh', background: 'url(/frame_setup_1.jpg) center / cover'}} >             
-                                </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Extrusion frame with mild steel angle braces</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">The VFD in the process of figuring out setup and wiring (AliExpress instructions weren't great)</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp" id="photo-card">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/cnc_base_setup.jpg) center / cover'}} >             
+                            <div className="gallery-card-image" id="photo-card">
+                                <div className="gallery-card-photo" style={{height: '30vh', background: 'url(/frame_setup_1.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">All components wired for testing, MDF base boards being mounted</span>
-                                </div>
-                            </div>
-                        </Cell>
-                        <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp" id="photo-card">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/cnc_z.jpg) center / cover'}} >             
-                                </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Z-axis, assembled from AliExpress roller/rail/ballscrew and welded scrap angles</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Extrusion frame with mild steel angle braces</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp" id="photo-card">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/cnc_firstcut.jpg) center / cover'}} >             
+                            <div className="gallery-card-image" id="photo-card">
+                                <div className="gallery-card-photo" style={{background: 'url(/cnc_base_setup.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">First engraving job, so much dust...</span>
-                                </div>
-                            </div>
-                        </Cell>
-                        <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp" id="photo-card">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/cnc_sidepanel.jpg) center / cover'}} >             
-                                </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Side panels for a archery bow case - deep cuts got a bit smoky from rubbing</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">All components wired for testing, MDF base boards being mounted</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp" id="photo-card">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/cnc_endresults.jpg) center / cover'}} >             
+                            <div className="gallery-card-image" id="photo-card">
+                                <div className="gallery-card-photo" style={{background: 'url(/cnc_z.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Wedding gift portrait engraving, ~0.7x1.0m in size</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Z-axis, assembled from AliExpress roller/rail/ballscrew and welded scrap angles</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp" id="photo-card">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/cnc_me.jpg) center / cover'}} >             
+                            <div className="gallery-card-image" id="photo-card">
+                                <div className="gallery-card-photo" style={{background: 'url(/cnc_firstcut.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Me fresh out of university, assembling the control box; can almost smell the leather jacket and deodorant through the photo...</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">First engraving job, so much dust...</span>
+                                </div>
+                            </div>
+                        </Cell>
+                        <Cell col={4} phone={12} align='middle'>
+                            <div className="gallery-card-image" id="photo-card">
+                                <div className="gallery-card-photo" style={{background: 'url(/cnc_sidepanel.jpg) center / cover'}} >             
+                                </div>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Side panels for a archery bow case - deep cuts got a bit smoky from rubbing</span>
+                                </div>
+                            </div>
+                        </Cell>
+                        <Cell col={4} phone={12} align='middle'>
+                            <div className="gallery-card-image" id="photo-card">
+                                <div className="gallery-card-photo" style={{background: 'url(/cnc_endresults.jpg) center / cover'}} >             
+                                </div>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Wedding gift portrait engraving, ~0.7x1.0m in size</span>
+                                </div>
+                            </div>
+                        </Cell>
+                        <Cell col={4} phone={12} align='middle'>
+                            <div className="gallery-card-image" id="photo-card">
+                                <div className="gallery-card-photo" style={{background: 'url(/cnc_me.jpg) center / cover'}} >             
+                                </div>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Me fresh out of university, assembling the control box; can almost smell the leather jacket and deodorant through the photo...</span>
                                 </div>
                             </div>
                         </Cell>

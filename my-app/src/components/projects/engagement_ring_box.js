@@ -12,9 +12,9 @@ class engagement_ring_box extends Component {
                     <p>After drawing out the box exterior in record time, I figured why not challenge myself by adding an unnecessarily complicated mechanism which raises the ring on a platform as the lid is opened, for that extra wow factor.</p>
                     <p>A few things which I experimented with on this particular project was:</p>
                     <ol>
-                    <strong><li>Altering machining path in CAM to create a subtle sunburst patterned surface finish (who said engineers are all about function?).</li></strong>
-                    <strong><li>3D printing custom gear profiles.</li></strong>
-                    <strong><li>Laser-cutting of exotic materials (Paua shell inlay panels).</li></strong>
+                    <li><strong>Altering machining path in CAM to create a subtle sunburst patterned surface finish (who said engineers are all about function?).</strong></li>
+                    <li><strong>3D printing custom gear profiles.</strong></li>
+                    <li><strong>Laser-cutting of exotic materials (Paua shell inlay panels).</strong></li>
                     </ol>
                     <p>The cosmetic "sunburst" milling paths worked surprisingly well. 
                         I started this project in Fusion360 as it was free for hobbyist use (not anymore though I think?). 
@@ -35,9 +35,11 @@ class engagement_ring_box extends Component {
                     </ul>
                     <h3>Equipment Used</h3>
                     <hr/>
-                    <li><strong>Datron Neo 3-Axis CNC mill</strong></li>
-                    <li><strong>Trotec Speedy400 laser cutter</strong></li>
-                    <li><strong>Stratasys Objet24 resin jet 3D printer</strong></li>
+                    <ul>
+                        <li><strong>Datron Neo 3-Axis CNC mill</strong></li>
+                        <li><strong>Trotec Speedy400 laser cutter</strong></li>
+                        <li><strong>Stratasys Objet24 resin jet 3D printer</strong></li>
+                    </ul>
                     <h3>Lessons Learned</h3>
                     <hr/>
                     <ul>
@@ -52,47 +54,47 @@ class engagement_ring_box extends Component {
                     <hr/>
                     <Grid className='project-photo-grid'>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ringbox_2.jpg) center / cover'}} >             
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ringbox_2.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Lid opened with ring platform raised</span>
-                                </div>
-                            </div>
-                        </Cell>
-                        <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ringbox_1.jpg) center / cover'}} >             
-                                </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Lid closed, raised edge on opening side</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Lid opened with ring platform raised</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ringbox_4.jpg) center / cover'}} >             
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ringbox_1.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Test fit with a keychain ring</span>
-                                </div>
-                            </div>
-                        </Cell>
-                        <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ringbox_3.jpg) center / cover'}} >             
-                                </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Billet aluminum frame, with "ejection" holes for the wooden inlay panels for serviceability</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Lid closed, raised edge on opening side</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ringbox_5.jpg) center / cover'}} >             
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ringbox_4.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">The secret sauce inside - POM guide plates for the raise/open mechanism, geared cross-shaft, and aluminum lid supports</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Test fit with a keychain ring</span>
+                                </div>
+                            </div>
+                        </Cell>
+                        <Cell col={4} phone={12} align='middle'>
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ringbox_3.jpg) center / cover'}} >             
+                                </div>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Billet aluminum frame, with "ejection" holes for the wooden inlay panels for serviceability</span>
+                                </div>
+                            </div>
+                        </Cell>
+                        <Cell col={4} phone={12} align='middle'>
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ringbox_5.jpg) center / cover'}} >             
+                                </div>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">The secret sauce inside - POM guide plates for the raise/open mechanism, geared cross-shaft, and aluminum lid supports</span>
                                 </div>
                             </div>
                         </Cell>

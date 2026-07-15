@@ -27,7 +27,7 @@ class laser_turret extends Component {
                     </ul>
                     <br></br>
                     <p>Note: Due to coming out of COVID lockdown and accidentally breaking some parts relocating my home office, this project is on hiatus for now :(</p>
-                    <h2>Lessons Learned</h2>
+                    <h3>Lessons Learned</h3>
                     <hr/>
                     <h4>Optimized image processing is HARD</h4>
                     <p>Initially I had planned this to run the image processing and machine control on one board if possible. 
@@ -52,24 +52,24 @@ class laser_turret extends Component {
                     <p>
                     I quickly realised this wasn't really a field I was particularly wanting (or even intellectually capable) to do a PhD in, which played a big part in placing this project on hiatus.
                     </p>
-                    <h2>Build Photos</h2>
+                    <h3>Build Photos</h3>
                     <hr/>
                     <Grid className='project-photo-grid'>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp" id="photo-card">
-                                <div class="mdl-card__title mdl-card--expand" style={{height: '30vh', background: 'url(/gui_turret1.png) center / cover'}} >             
+                            <div className="gallery-card-image" id="photo-card">
+                                <div className="gallery-card-photo" style={{height: '30vh', background: 'url(/gui_turret1.png) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Face recognition and tracking working using OpenCV, with basic control loop to keep face centered</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Face recognition and tracking working using OpenCV, with basic control loop to keep face centered</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp" id="photo-card">
-                                <div class="mdl-card__title mdl-card--expand" style={{height: '30vh', background: 'url(/laser_turret.jpg) center / cover'}} >             
+                            <div className="gallery-card-image" id="photo-card">
+                                <div className="gallery-card-photo" style={{height: '30vh', background: 'url(/laser_turret.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">The very crude tilt and pan arrangement, mounted on a selection of posts from the "scrapped shafts" bin</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">The very crude tilt and pan arrangement, mounted on a selection of posts from the "scrapped shafts" bin</span>
                                 </div>
                             </div>
                         </Cell>

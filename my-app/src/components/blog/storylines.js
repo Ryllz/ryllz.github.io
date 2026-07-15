@@ -21,7 +21,7 @@ class storylines extends Component {
                     </ul>
                     <hr/>
                     <Grid>
-                        <Cell col={12} style={{'text-align':'top', margin: 'auto'}}>
+                        <Cell col={12} style={{textAlign:'top', margin: 'auto'}}>
                             <h3>A Song of Ice and Fire (AKA Game of Thrones)</h3>
                             <b>Where to even begin with this...</b>
                             <p>I was a huge fan of George RR Martin before he was cool; I read all his works (even the weird vampire one) and Game of Thrones defined books for me in my mid-teens.</p>
@@ -37,10 +37,10 @@ class storylines extends Component {
                             <p>The TV show has also concluded a few years prior, and I'd sadly caved and watched it all to find out how the series ends. It was heartbreakingly bad.</p>
                             <br></br>
                         </Cell>
-                        <Cell col={4} phone={12} style={{'text-align':'top', margin: 'auto'}}>
-                            <img src={'/got_timeline.png'} width="95%" style={{'vertical-align':'middle'}} class='inline-img'></img>
+                        <Cell col={4} phone={12} style={{textAlign:'top', margin: 'auto'}}>
+                            <img src={'/got_timeline.png'} alt='Timeline of A Song of Ice and Fire book and TV release milestones' width="95%" style={{verticalAlign:'middle'}} className='inline-img'/>
                         </Cell>
-                        <Cell col={8} phone={12} style={{'text-align':'top', margin: 'auto'}}>
+                        <Cell col={8} phone={12} style={{textAlign:'top', margin: 'auto'}}>
                             <b>Why does this bother me so much?</b>
                             <p>The series just had so much potential, and my disappointment stems from an overwhelming sense of pity when thinking about <em>what could have been.</em></p>
                             <br></br>
@@ -56,10 +56,10 @@ class storylines extends Component {
                     <p>The story starts on the aptly named Destiny Islands, and the prologue crafts a touching scene of childhood friendship (and foreshadowed love triangle) between 3 main characters who are then catastrophically separated.</p>
                     <p>Going through the game, the main plot thread is to reunite the trio - exploring the themes of self sacrifice and friendship along the way. After adventuring through numerous Disney themed sets, everything culminates in a bittersweet cliffhanger ending where the heroes are separated yet again.</p>
                     <Grid>
-                        <Cell col={7} style={{'text-align':'top', margin: 'auto'}}>
-                            <img src={'/kh_timeline.jpg'} width="95%" style={{'vertical-align':'middle'}} class='inline-img'></img>
+                        <Cell col={7} style={{textAlign:'top', margin: 'auto'}}>
+                            <img src={'/kh_timeline.jpg'} alt='Timeline of the Kingdom Hearts game series releases' width="95%" style={{verticalAlign:'middle'}} className='inline-img'/>
                         </Cell>
-                        <Cell col={5} style={{'text-align':'top', margin: 'auto'}}>
+                        <Cell col={5} style={{textAlign:'top', margin: 'auto'}}>
                             <b>Fast forward to 2021</b>
                             <p>I've totally lost track of the number of sequels, which have been spread across every platform possible to milk money out of the series' fans.</p>
                             <p>Multi-hour long Youtube lectures can be found aplenty to explain the unrecognizable spaghetti ball of a plot.</p>
@@ -68,7 +68,7 @@ class storylines extends Component {
                             <br></br>
 
                         </Cell>
-                        <Cell col={12} style={{'text-align':'top', margin: 'auto'}}>
+                        <Cell col={12} style={{textAlign:'top', margin: 'auto'}}>
                         <br></br>
                         <b>Why do I care so much?</b>
                             <p>This was a series that could've grown with the fanbase and defined JRPGs + Disney characters for a generation.</p>

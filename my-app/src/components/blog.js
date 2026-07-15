@@ -5,18 +5,19 @@ class Blog extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeTab: 0,
+            activeTab: 1,
             verifiedPw: false
         };
         this.checkPw = this.checkPw.bind(this);
     }
 
-    checkPw() {
+    checkPw(e) {
+        e.preventDefault();
         const answer = document.getElementById("password").value;
-        if (answer === "hi123") {
+        if (answer === "hellothere") {
             this.setState({ verifiedPw: true });
         } else {
-            alert("Nope!\n\n...if you really must see my terrible blog writing skills, poke around the dev console to get around :)");
+            alert("If you must see my terrible blog writing skills, poke around the dev console to get around!");
         }
     }
 
@@ -34,18 +35,6 @@ class Blog extends Component {
                                 </div>
                                 <div className="card-actions">
                                     <Link to="/blog/storylines"><button className="btn btn-primary">Read</button></Link>
-                                </div>
-                            </div>
-                        </div>
-                        <div className="col-4 align-middle">
-                            <div className="card" style={{width: '100%', minHeight: '25em', margin: 'auto'}}>
-                                <div className="card-title project-title-pic" style={{height: '8em', color: '#fff', background: 'url(/repeat.png) center / contain no-repeat'}}></div>
-                                <div className="card-text">
-                                    <h4 style={{marginTop: 0}}>The rat race</h4>
-                                    Thoughts on attaining material goals
-                                </div>
-                                <div className="card-actions">
-                                    <Link to="/blog/rat_race"><button className="btn btn-primary">Read</button></Link>
                                 </div>
                             </div>
                         </div>

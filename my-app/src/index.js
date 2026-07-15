@@ -2,8 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import 'react-mdl/extra/material.css';
-import 'react-mdl/extra/material.js';
 import './index.css';
 import { HashRouter } from 'react-router-dom';
 

@@ -9,10 +9,10 @@ class PlateConveyor extends Component {
                 <hr></hr>
                 <Grid>
                     <Cell col={4} phone={12}>
-                    <Cell col={12} style={{'text-align':'center', margin: 'auto'}}>
-                    <img src={'/plate_conveyor1.JPG'} width="90%" style={{'vertical-align':'middle'}} class='inline-img'></img>
+                    <Cell col={12} style={{textAlign:'center', margin: 'auto'}}>
+                    <img src={'/plate_conveyor1.JPG'} alt='In-feed side of the plate conveyor showing the hazardous pinch zone' width="90%" style={{verticalAlign:'middle'}} className='inline-img'/>
                     </Cell>
-                    <Cell col={12} style={{width:"80%", 'text-align':'center', margin: 'auto'}}>
+                    <Cell col={12} style={{width:"80%", textAlign:'center', margin: 'auto'}}>
                         <br></br>
                     <em>The conveyor was completely electrically disconnected and motor un-coupled when I took this picture for reference. <br></br>Yet my finger was still tingling when I took this picture...</em>
                     </Cell>
@@ -70,7 +70,7 @@ class PlateConveyor extends Component {
                 <p>See the conveyor in action below!</p>
                 <em>Note: Certain safety elements are excluded this video for better process visibility, as this is a partial demo machine running examples in an enclosed area for a tradeshow.</em>
                 <hr></hr>
-                <iframe style={{'padding-bottom':'2em'}} width="560" height="315" src="https://www.youtube.com/embed/nOyjXuZbA7M?start=173" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe style={{paddingBottom:'2em'}} width="560" height="315" src="https://www.youtube.com/embed/nOyjXuZbA7M?start=173" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
         )
     }

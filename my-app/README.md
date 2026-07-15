@@ -1,70 +1,135 @@
-# Getting Started with Create React App
+# ryllz.github.io — Personal Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A single-page portfolio for **Ryllian Zhang** (Hardware Engineering Manager), built with
+Create React App and deployed to GitHub Pages at
+[ryllz.github.io](https://ryllz.github.io/).
 
-## Available Scripts
+The app started life on Material Design Lite (`react-mdl`), which has since been
+fully removed in favour of a hand-rolled CSS design system — the MDL primitives and
+gallery cards are now lightweight local components/classes
+([`src/components/layout.js`](src/components/layout.js), [`src/App.css`](src/App.css)).
+Material Icons are loaded directly from Google Fonts in
+[`public/index.html`](public/index.html).
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Tech stack
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+| Concern            | Choice                                                            |
+| ------------------ | ----------------------------------------------------------------- |
+| Framework          | React 17 (Create React App / `react-scripts` 5)                   |
+| Routing            | `react-router-dom` v6 with **`HashRouter`**                       |
+| Styling            | Hand-rolled CSS design system ([`src/App.css`](src/App.css), [`src/index.css`](src/index.css)) |
+| UI primitives      | Local `Grid`/`Cell`/`Card`/`Chip` in [`layout.js`](src/components/layout.js) |
+| Misc               | `react-modal` (attributions), `react-to-print` (resume), `react-spinners` (loader) |
+| Deploy             | `gh-pages` → GitHub Pages                                         |
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+> **Why `HashRouter`?** GitHub Pages serves static files with no server-side
+> rewriting, so a `BrowserRouter` deep link like `/projects/euler_angles` would
+> 404 on refresh. `HashRouter` keeps all routing client-side behind the `#`
+> (`ryllz.github.io/#/projects/euler_angles`), which survives reloads and direct links.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Architecture
 
-### `npm run build`
+The app is a small, flat SPA. Everything is content-driven React components — there is
+no CMS, backend, or data-fetching layer; page copy lives directly in JSX.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+my-app/
+├── public/                 # static assets served as-is (images, PDFs, favicons)
+├── src/
+│   ├── index.js            # entry point — wraps <App/> in <HashRouter>
+│   ├── App.js              # shell: navbar, footer, loader, attributions modal, scroll-reveal
+│   ├── App.css / index.css # global design system + layout
+│   ├── components/
+│   │   ├── main.js         # route table (all <Route>s live here)
+│   │   ├── home.js         # landing page (hero + skills + project highlights)
+│   │   ├── resume.js       # resume + print-to-PDF wrapper
+│   │   ├── projects.js     # project index grid (personal + professional)
+│   │   ├── blog.js         # blog index (password-gated, tabbed by year)
+│   │   ├── contact.js      # contact card
+│   │   ├── layout.js       # shared Grid/Cell/Card/Chip primitives
+│   │   ├── projects/       # one component per project detail page
+│   │   └── blog/           # one component per blog post
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### How it fits together
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **[`index.js`](src/index.js)** mounts `<App/>` inside `<HashRouter>`.
+2. **[`App.js`](src/App.js)** renders the persistent chrome — top navbar,
+   footer with an attributions modal, an initial `CircleLoader` splash, and a
+   scroll-reveal system built on `IntersectionObserver` that re-observes elements
+   on every route change (see the `useEffect` keyed on `location.pathname`).
+3. **[`main.js`](src/components/main.js)** holds the full `<Routes>` table. Each top-level
+   page and each project/blog detail page has its own route and its own component.
+4. **Detail pages** under `projects/` and `blog/` are self-contained components whose
+   content is written inline as JSX.
 
-### `npm run eject`
+### Adding a new project or blog post
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+1. Create the component, e.g. `src/components/projects/my_project.js`.
+2. Import it and register a `<Route>` in [`main.js`](src/components/main.js).
+3. Add a card linking to it in [`projects.js`](src/components/projects.js)
+   (or `blog.js`), and drop any images into `public/`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Local development
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Requires **Node 18+** (developed on Node 20). All commands run from the `my-app/` directory.
 
-## Learn More
+```bash
+cd my-app
+npm install      # install dependencies
+npm start        # dev server at http://localhost:3000 (hot reload)
+npm run build    # production build into build/
+npm test         # CRA/Jest test runner
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+---
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment (GitHub Pages)
 
-### Code Splitting
+Deployment is handled by the [`gh-pages`](https://github.com/tschaub/gh-pages) package,
+wired up in [`package.json`](package.json):
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```json
+"homepage": "https://ryllz.github.io/",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -b master -d build"
+}
+```
 
-### Analyzing the Bundle Size
+To publish:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```bash
+cd my-app
+npm run deploy
+```
 
-### Making a Progressive Web App
+What happens:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. `predeploy` runs `npm run build`, producing an optimized bundle in `build/`.
+2. `deploy` pushes the **contents of `build/`** to the **`master`** branch of the repo.
+3. GitHub Pages is configured to serve `ryllz.github.io` from the root of the
+   `master` branch, so the new build goes live within a minute or two.
 
-### Advanced Configuration
+> **Note on the `homepage` field:** because the site is served from the domain root
+> (`ryllz.github.io/`, a user/organization Pages site) rather than a project subpath,
+> `homepage` is just `/`. If this ever moves to a project page
+> (`ryllz.github.io/some-repo/`), update `homepage` accordingly so asset paths resolve.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> **Branch layout:** source lives on `main`; the built site is published to `master`.
+> Don't hand-edit `master` — it is overwritten by every `npm run deploy`.
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Project layout note
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This repository root contains the `my-app/` CRA project plus a `Scratch/` folder of
+one-off helper scripts and an `attributions` file. The CRA app is entirely
+self-contained within `my-app/`; the root-level `package.json` is vestigial and not
+used by the build or deploy.

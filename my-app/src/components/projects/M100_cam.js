@@ -9,7 +9,7 @@ class M100CAM extends Component {
                 <hr></hr>
                 <Grid>
                     <Cell col={4} phone={12}>
-                    <img src={'/m100_cover2.png'} width="95%" style={{'vertical-align':'middle'}} class='inline-img'></img>
+                    <img src={'/m100_cover2.png'} alt='The enormous in-house M100 CNC milling machine' width="95%" style={{verticalAlign:'middle'}} className='inline-img'/>
                     </Cell>
                     <Cell col={8} phone={12}>
                     <p>How do you make the parts for precision CNC machines that can span dozens of meters? With an even bigger CNC milling machine of course!</p>
@@ -64,7 +64,7 @@ class M100CAM extends Component {
                     </p>
                 </ul>
                 <h3>Video</h3>
-                <iframe style={{'padding-bottom':'2em'}} width="560" height="315" src="https://www.youtube.com/embed/ZMSxkgCGnX8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe style={{paddingBottom:'2em'}} width="560" height="315" src="https://www.youtube.com/embed/ZMSxkgCGnX8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
         )
     }

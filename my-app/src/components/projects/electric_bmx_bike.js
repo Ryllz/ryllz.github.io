@@ -49,90 +49,90 @@ class electric_bmx_bike extends Component {
                     <hr/>
                     <Grid className='project-photo-grid'>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ebike_8.jpg) center / cover'}} >             
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ebike_8.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">4kW worth of brakes baby!</span>
-                                </div>
-                            </div>
-                        </Cell>
-                        <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ebike_7.jpg) center / cover'}} >             
-                                </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">400W server PSU for charging + chonky inductor add-on adapter</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">4kW worth of brakes baby!</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ebike_9.jpg) center / cover'}} >             
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ebike_7.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Front charging port and 3D printed main support profile</span>
-                                </div>
-                            </div>
-                        </Cell>
-                        <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ebike_5.png) center / cover'}} >             
-                                </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Battery pack with BMS strapped on-top, with foam inserts between each battery to prevent bumping</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">400W server PSU for charging + chonky inductor add-on adapter</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ebike_6.png) center / cover'}} >             
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ebike_9.jpg) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Spaghetti wiring harness with C32 breaker (supposedly rated for 5-10x 32A for instantaneous trip)</span>
-                                </div>
-                            </div>
-                        </Cell>
-                        <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ebike_3.png) center / cover'}} >             
-                                </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">HUD with twist throttle and regen thumb brake</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Front charging port and 3D printed main support profile</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ebike_4.png) center / cover'}} >             
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ebike_5.png) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">MXUS 3k-Turbo, of course for "future-proofing" incase I ever got a 12kW controller</span>
-                                </div>
-                            </div>
-                        </Cell>
-                        <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ebike_1.png) center / cover'}} >             
-                                </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Bike build in progress, heatshrinking in the living room</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Battery pack with BMS strapped on-top, with foam inserts between each battery to prevent bumping</span>
                                 </div>
                             </div>
                         </Cell>
                         <Cell col={4} phone={12} align='middle'>
-                            <div class="gallery-card-image mdl-card mdl-shadow--2dp">
-                                <div class="mdl-card__title mdl-card--expand" style={{background: 'url(/ebike_2.png) center / cover'}} >             
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ebike_6.png) center / cover'}} >             
                                 </div>
-                                <div class="mdl-card__actions">
-                                    <span class="card-image-caption">Completed prototype bike!</span>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Spaghetti wiring harness with C32 breaker (supposedly rated for 5-10x 32A for instantaneous trip)</span>
+                                </div>
+                            </div>
+                        </Cell>
+                        <Cell col={4} phone={12} align='middle'>
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ebike_3.png) center / cover'}} >             
+                                </div>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">HUD with twist throttle and regen thumb brake</span>
+                                </div>
+                            </div>
+                        </Cell>
+                        <Cell col={4} phone={12} align='middle'>
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ebike_4.png) center / cover'}} >             
+                                </div>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">MXUS 3k-Turbo, of course for "future-proofing" incase I ever got a 12kW controller</span>
+                                </div>
+                            </div>
+                        </Cell>
+                        <Cell col={4} phone={12} align='middle'>
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ebike_1.png) center / cover'}} >             
+                                </div>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Bike build in progress, heatshrinking in the living room</span>
+                                </div>
+                            </div>
+                        </Cell>
+                        <Cell col={4} phone={12} align='middle'>
+                            <div className="gallery-card-image">
+                                <div className="gallery-card-photo" style={{background: 'url(/ebike_2.png) center / cover'}} >             
+                                </div>
+                                <div className="card-actions">
+                                    <span className="card-image-caption">Completed prototype bike!</span>
                                 </div>
                             </div>
                         </Cell>
                     </Grid>
                     <h3>System Diagram</h3>
                     <hr/>
-                        <img src="/ebike_system_diagram.jpg" alt="Adaptto system diagram" width="100%" height="auto"></img>
+                        <img src="/ebike_system_diagram.jpg" alt="Adaptto system diagram" width="100%" height="auto"/>
                     <p><i>Diagram courtesy of Adappto - http://adaptto.com/</i><br></br></p>
                 </div>
             )

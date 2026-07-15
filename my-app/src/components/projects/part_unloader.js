@@ -15,7 +15,7 @@ class PartUnloader extends Component {
                 <br></br>
                 <p>To breakdown the differences in operation procedure:</p>
                 <Grid>
-                    <Cell col={6} phone={12} style={{'background-color':'#F0EEEE', 'padding':'1.5em', 'padding-top':'0', 'padding-bottom':'0'}}>
+                    <Cell col={6} phone={12} style={{backgroundColor:'#F0EEEE', 'padding':'1.5em', paddingTop:'0', paddingBottom:'0'}}>
                         <h4>Without</h4>
                         <ol>
                         <li>Plates to be processed are loaded onto the cutting bed via crane</li>
@@ -25,7 +25,7 @@ class PartUnloader extends Component {
                         <li>Plate skeletons are removed, and process repeated from the step 1</li>
                         </ol>
                     </Cell>
-                    <Cell col={6} phone={12} style={{'background-color':'#F0EEEE', 'padding':'1.5em', 'padding-top':'0', 'padding-bottom':'0'}}>
+                    <Cell col={6} phone={12} style={{backgroundColor:'#F0EEEE', 'padding':'1.5em', paddingTop:'0', paddingBottom:'0'}}>
                         <h4>With Unloader</h4>
                         <ol>
                         <li>Plates to be processed are loaded onto the cutting bed via crane</li>
@@ -63,7 +63,7 @@ class PartUnloader extends Component {
                 </ul>
                 <h3>Video</h3>
                 <hr></hr>
-                <iframe width="560" height="315" style={{'padding-bottom':'2em'}} src="https://www.youtube.com/embed/LIZbw8HBWYc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" style={{paddingBottom:'2em'}} src="https://www.youtube.com/embed/LIZbw8HBWYc" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
             </div>
         )
     }

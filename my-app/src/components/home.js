@@ -16,7 +16,7 @@ class Home extends Component {
                             <div className="hero-bio">
                                 <p>I'm an avid learner who pursued a career in engineering to satisfy my natural curiosity about how things work. Although my experience is primarily in the mechanical space, I pride myself in a diverse range of interests and hobbies which add to my problem solving toolkit.</p>
                                 <p>...for example, building this website to learn some basics about git and frontend/backend web development &#128516;</p>
-                                <p><b>Update 2026:</b> now spiced up with LLM magic! &#10024;</p>
+                                <p><b>Update 2026:</b> now spiced up using LLM magic! &#10024;</p>
                             </div>
                             <div className="hero-ctas">
                                 <Link to="/projects" className="btn btn-primary">View Projects</Link>
@@ -26,8 +26,7 @@ class Home extends Component {
                     </div>
                 </section>
 
-                <h1 className="title" style={{paddingTop: '1em'}}>Areas of Expertise</h1>
-                <hr className="short1"/>
+                <h1 className="title underline" style={{paddingTop: '1em'}}>Areas of Expertise</h1>
                 <div className='intro-box'>
                     <div className="grid-row skill-grid">
                         <div className="col-3">
@@ -79,8 +78,7 @@ class Home extends Component {
 
                 <br/>
                 <br/>
-                <h1 className='title'>Personal Project Highlights</h1>
-                <hr className="short1"/>
+                <h1 className='title underline'>Personal Project Highlights</h1>
                 <div className='project-box'>
                     <div className='grid-row project-grid'>
                         <div className="col-4 align-middle">
@@ -120,8 +118,7 @@ class Home extends Component {
                 </div>
 
                 <br/>
-                <h1 className='title'>Professional Project Highlights</h1>
-                <hr className="short1"/>
+                <h1 className='title underline'>Professional Project Highlights</h1>
                 <div className='blog-box'>
                     <div className='grid-row project-grid'>
                         <div className="col-4">

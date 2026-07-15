@@ -14,13 +14,13 @@ class Contact extends Component {
                                 <tbody>
                                     <tr>
                                         <td className='center'>
-                                            <a href="www.linkedin.com/in/ryllian-zhang"><img src={'/linkedin.png'} alt='LinkedIn' className='ico-resume-mini'/></a>
+                                            <a href="https://www.linkedin.com/in/ryllian-zhang"><img src={'/linkedin.png'} alt='LinkedIn' className='ico-resume-mini'/></a>
                                             <em>www.linkedin.com/in/ryllian-zhang</em>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td className='center'>
-                                            <a href="mailto: ryllianz@gmail.com"><img src={'/email.png'} alt='Email' className='ico-resume-mini'/></a>
+                                            <a href="mailto:ryllianz@gmail.com"><img src={'/email.png'} alt='Email' className='ico-resume-mini'/></a>
                                             <em>ryllianz@gmail.com</em>
                                         </td>
                                     </tr>

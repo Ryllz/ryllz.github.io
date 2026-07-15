@@ -21,7 +21,7 @@ class DesignScale extends Component {
                             <br></br>
                             <hr/>
                         </Cell>
-                        <Cell col={6} phone={12} style={{'text-align':'center', margin: 'auto'}}>
+                        <Cell col={6} phone={12} style={{textAlign:'center', margin: 'auto'}}>
                             <h4>This is an artwork called Voice of Fire by Barnett Newman. It resides at the National Gallery of Canada and is worth an estimated $40 million.</h4>
                             <br></br>
                             <p>Taking a look at it from your device screen, it's likely unremarkable - and probably seems to be an outrageously bad value proposition.</p>
@@ -29,9 +29,9 @@ class DesignScale extends Component {
                             <p>For the price tag one would typically expect intricate details and masterful painting techniques, yet it boils down to 2 colors and 3 lines.</p>
                         </Cell>
                         <Cell col={6} phone={12}>
-                            <img src={'voice_of_fire.png'} width="95%" height="90%" style={{'vertical-align':'middle'}} class='inline-img'></img>
+                            <img src={'voice_of_fire.png'} alt='Voice of Fire painting by Barnett Newman as it appears on a small screen' width="95%" height="90%" style={{verticalAlign:'middle'}} className='inline-img'/>
                         </Cell>
-                        <Cell col={12} phone={12} style={{'text-align':'center', margin: 'auto'}}>
+                        <Cell col={12} phone={12} style={{textAlign:'center', margin: 'auto'}}>
                             <hr/>
                             <h4>When taking into perspective the size of the piece though, it becomes pretty clear why it 'works' and resonates with people.</h4>
                             <p>Namely the focus on getting the colours right and really leveraging the simplicity and size of the piece to create impact.</p>
@@ -39,7 +39,7 @@ class DesignScale extends Component {
                             <p>I won't say that I'd personally pay $40million for this piece - but nonetheless it has always popped into my mind when I find myself over-thinking the minutiae of a design.</p>
                         </Cell>
                         <Cell col={12} phone={12}>
-                            <img src={'voice_of_fire2.jpg'} width="95%" height="90%" style={{'vertical-align':'middle'}} class='inline-img'></img>
+                            <img src={'voice_of_fire2.jpg'} alt='Voice of Fire painting shown at scale with a viewer for size reference' width="95%" height="90%" style={{verticalAlign:'middle'}} className='inline-img'/>
                             <figcaption><em>Source - National Gallery of Canada</em></figcaption>
                         </Cell>
                     </Grid>

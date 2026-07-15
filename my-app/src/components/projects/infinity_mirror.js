@@ -5,7 +5,7 @@ class infinity_mirror extends Component {
             return(
                 <div className="tab-content">
                 <h2>Mirror mirror on the wall</h2>
-                <hr class='low-margin'></hr>
+                <hr/>
                     <p>Late in my early 20s I was fortunate enough to get my own living area, and quickly realised I didn't own a mirror.</p>
                     <p>Of course, buying a mirror would've been too easy - so I made an infinity mirror out of some reclaimed Kauri, one way mirror film and two glass sheets.</p>
                     <br/>
@@ -40,8 +40,8 @@ class infinity_mirror extends Component {
                         </p>
                     </ul>
                     <h3>Build Video</h3>
-                    <hr class='low-margin'></hr>
-                    <video width="640" height="360" controls muted style={{'padding-bottom':'2em'}}>
+                    <hr className='low-margin'></hr>
+                    <video width="640" height="360" controls muted style={{paddingBottom:'2em'}}>
                         <source src='infinity_mirror.mp4' type="video/mp4"></source>
                         Your browser does not support the video tag.
                     </video>

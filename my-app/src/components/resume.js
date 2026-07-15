@@ -22,13 +22,13 @@ class Resume extends Component {
                                 <tbody>
                                     <tr>
                                         <td className='center'>
-                                            <a href="www.linkedin.com/in/ryllian-zhang"><img src={'/linkedin.png'} alt='LinkedIn' className='ico-resume-mini'/></a>
+                                            <a href="https://www.linkedin.com/in/ryllian-zhang"><img src={'/linkedin.png'} alt='LinkedIn' className='ico-resume-mini'/></a>
                                             <em>www.linkedin.com/in/ryllian-zhang</em>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td className='center'>
-                                            <a href="mailto: ryllianz@gmail.com"><img src={'/email.png'} alt='Email' className='ico-resume-mini'/></a>
+                                            <a href="mailto:ryllianz@gmail.com"><img src={'/email.png'} alt='Email' className='ico-resume-mini'/></a>
                                             <em>ryllianz@gmail.com</em>
                                         </td>
                                     </tr>
@@ -38,7 +38,7 @@ class Resume extends Component {
                         <Card id='resume-entry'>
                             <SectionHead icon="school">Education</SectionHead>
                             <Grid style={{width: '100%'}}>
-                                <Cell col={2} hidePhone={true} style={{margin: 'auto', textAlign: 'center', minWidth: '2em'}}>
+                                <Cell col={2} hidePhone={true} className="hide-narrow edu-logo-cell" style={{margin: 'auto', textAlign: 'center', minWidth: '2em'}}>
                                     <img src={'/UoA_logo.png'} alt='University of Auckland' className='ico-resume'/>
                                 </Cell>
                                 <Cell col={10}>
@@ -88,9 +88,9 @@ class Resume extends Component {
                                 </table>
                             </CardText>
                         </Card>
-                        <Card id='resume-entry'>
+                        <Card id='resume-entry' className="hide-narrow">
                             <SectionHead icon="interests">Interests</SectionHead>
-                            <Grid style={{width: '100%'}}>
+                            <Grid className="interests-grid" style={{width: '100%'}}>
                                 <Cell col={2} style={{margin: 'auto', width: 'auto'}}><img src={'/hiking.png'} alt='Hiking' className='ico-resume-interests'/></Cell>
                                 <Cell col={2} style={{margin: 'auto', width: 'auto'}}><img src={'/diving.png'} alt='Diving' className='ico-resume-interests'/></Cell>
                                 <Cell col={2} style={{margin: 'auto', width: 'auto'}}><img src={'/cars.png'} alt='Cars and engines in general!' className='ico-resume-interests'/></Cell>
